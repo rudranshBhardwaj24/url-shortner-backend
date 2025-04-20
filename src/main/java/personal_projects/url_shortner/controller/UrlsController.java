@@ -20,12 +20,12 @@ public UrlsController(UrlsService urlsService){
     this.urlsService = urlsService;
 }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+
     @PostMapping("/save")
     public String saveUrl(@RequestBody Urls request) {
         return urlsService.saveUrl(request.getKey(), request.getValue());
     }
-    @CrossOrigin(origins = "http://localhost:5173")
+
     @GetMapping("/get")
     public ResponseEntity<Object> getUrl(@RequestParam String key) {
         System.out.println(key);
