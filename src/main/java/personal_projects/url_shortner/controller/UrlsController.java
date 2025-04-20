@@ -23,7 +23,7 @@ public UrlsController(UrlsService urlsService){
 
     @PostMapping("/save")
     public String saveUrl(@RequestBody Urls request) {
-        return urlsService.saveUrl(request.getKey(), request.getValue());
+        return "url-shortner-backend-ssdt.onrender.com/api/url/get?key="  + urlsService.saveUrl(request.getKey(),request.getValue());
     }
 
     @GetMapping("/get")
